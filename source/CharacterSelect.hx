@@ -47,7 +47,7 @@ class CharacterSelect extends MusicBeatState
 	var characterArray:Array<String> = [
 		'bf',
 		'bf-justice',
-		'bf-justice2'
+		'bf-pigeon'
 	];
 
 	var character:Character;

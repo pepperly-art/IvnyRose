@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="artemisharvest.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Artemis Harvest idle0000" x="2" y="2" width="848" height="945" frameX="-9" frameY="-31" frameWidth="874" frameHeight="976"/>
+	<SubTexture name="Artemis Harvest idle0001" x="2" y="2" width="848" height="945" frameX="-9" frameY="-31" frameWidth="874" frameHeight="976"/>
+	<SubTexture name="Artemis Harvest idle0002" x="852" y="2" width="857" height="950" frameX="-7" frameY="-26" frameWidth="874" frameHeight="976"/>
+	<SubTexture name="Artemis Harvest idle0003" x="852" y="2" width="857" height="950" frameX="-7" frameY="-26" frameWidth="874" frameHeight="976"/>
+	<SubTexture name="Artemis Harvest idle0004" x="1711" y="2" width="870" height="962" frameX="-2" frameY="-14" frameWidth="874" frameHeight="976"/>
+	<SubTexture name="Artemis Harvest idle0005" x="1711" y="2" width="870" height="962" frameX="-2" frameY="-14" frameWidth="874" frameHeight="976"/>
+	<SubTexture name="Artemis Harvest idle0006" x="2583" y="2" width="874" height="968" frameX="0" frameY="-8" frameWidth="874" frameHeight="976"/>
+	<SubTexture name="Artemis Harvest idle0007" x="2583" y="2" width="874" height="968" frameX="0" frameY="-8" frameWidth="874" frameHeight="976"/>
+	<SubTexture name="Artemis Harvest idle0008" x="2" y="972" width="866" height="954" frameX="-1" frameY="-22" frameWidth="874" frameHeight="976"/>
+	<SubTexture name="Artemis Harvest idle0009" x="2" y="972" width="866" height="954" frameX="-1" frameY="-22" frameWidth="874" frameHeight="976"/>
+	<SubTexture name="Artemis Harvest idle0010" x="870" y="972" width="858" height="963" frameX="-1" frameY="-13" frameWidth="874" frameHeight="976"/>
+	<SubTexture name="Artemis Harvest idle0011" x="870" y="972" width="858" height="963" frameX="-1" frameY="-13" frameWidth="874" frameHeight="976"/>
+	<SubTexture name="Artemis Harvest idle0012" x="1730" y="972" width="856" height="976" frameX="-1" frameY="0" frameWidth="874" frameHeight="976"/>
+	<SubTexture name="Artemis Harvest idle0013" x="1730" y="972" width="856" height="976" frameX="-1" frameY="0" frameWidth="874" frameHeight="976"/>
+</TextureAtlas>

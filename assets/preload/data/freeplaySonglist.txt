@@ -1,5 +1,7 @@
-The trial:dad:1
-Judgment:dad:1
-Executioner:dad:1
+The trial:justice:1
+Judgment:justice:1
+Executioner:justice:1
+angel-kiss:pigeon:1
+target-sighted:artemis:1
 
 

@@ -62,35 +62,50 @@ class Character extends FlxSprite
 
 				playAnim('danceRight');
 
-				case 'gf-gar':
-					tex = Paths.getSparrowAtlas('gardenia/assets/gfgardenia');
-					frames = tex;
-					animation.addByPrefix('cheer', 'GF Cheer', 24, false);
-					animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
-					animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-					animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-	
-					addOffset('cheer');
-					addOffset('sad', -2, -2);
-					addOffset('danceLeft', 0, -9);
-					addOffset('danceRight', 0, -9);
-	
-					playAnim('danceRight');
+			case 'gf-gar':
+				tex = Paths.getSparrowAtlas('gardenia/assets/GFgardenia');
+				frames = tex;
+				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
+				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 
-				case 'gf-kids':
-					tex = Paths.getSparrowAtlas('justice/assets/GF-kids');
-					frames = tex;
-					animation.addByPrefix('sad', 'gf sad', 24, false);
-					animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-					animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-					animation.addByPrefix('Disappointment', 'GF Down Note', 24, false);
-	
-					addOffset('sad', 19, 12);
-					addOffset('danceLeft', 0, -9);
-					addOffset('danceRight', 0, -9);
-					addOffset('Disappointment', 7, -9);
-	
-					playAnim('danceRight');
+				addOffset('cheer');
+				addOffset('sad', -2, -2);
+				addOffset('danceLeft', 0, -9);
+				addOffset('danceRight', 0, -9);
+
+				playAnim('danceRight');
+			
+			case 'gf-gar3':
+				tex = Paths.getSparrowAtlas('gardenia/assets/GFgardenia');
+				frames = tex;
+				animation.addByPrefix('cheer', 'GF Cheer STAGE3', 24, false);
+				animation.addByIndices('sad', 'gf sad PART2', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing Beat PART2', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing Beat PART2', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+
+				addOffset('cheer');
+				addOffset('sad', -2, -2);
+				addOffset('danceLeft', 0, -9);
+				addOffset('danceRight', 0, -9);
+
+				playAnim('danceRight');
+
+			case 'gf-kids':
+				tex = Paths.getSparrowAtlas('justice/assets/GF-kids');
+				frames = tex;
+				animation.addByPrefix('sad', 'gf sad', 24, false);
+				animation.addByIndices('danceLeft', 'GF Dancing Beat', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+				animation.addByIndices('danceRight', 'GF Dancing Beat', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+				animation.addByPrefix('Disappointment', 'GF Down Note', 24, false);
+
+				addOffset('sad', 19, 12);
+				addOffset('danceLeft', 0, -9);
+				addOffset('danceRight', 0, -9);
+				addOffset('Disappointment', 7, -9);
+
+				playAnim('danceRight');
 
 			case 'gf-christmas':
 				tex = Paths.getSparrowAtlas('characters/gfChristmas');
@@ -170,7 +185,7 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 
-				case 'justice':
+			case 'justice':
                 tex = Paths.getSparrowAtlas('justice/assets/justice', 'shared');
                 frames = tex;
                 animation.addByPrefix('idle', 'Justice_idleDANCE', 24);
@@ -191,7 +206,7 @@ class Character extends FlxSprite
         
                 playAnim('idle');
 
-				case 'justice2':
+			case 'justice2':
 				tex = Paths.getSparrowAtlas('justice/assets/justice-2', 'shared');
                 frames = tex;
                 animation.addByPrefix('idle', 'Justice_idleDANCE', 24);
@@ -201,23 +216,40 @@ class Character extends FlxSprite
                 addOffset("ugh");
         
                 playAnim('idle');
+			
+			case 'artemis':
+				tex = Paths.getSparrowAtlas('artemis/assets/artemis_assets', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'ARTEMIS idle', 24);
+				animation.addByPrefix('singUP', 'ARTEMIS note up', 24);
+				animation.addByPrefix('singRIGHT', 'ARTEMIS note right', 24);
+				animation.addByPrefix('singDOWN', 'ARTEMIS note down', 24);
+				animation.addByPrefix('singLEFT', 'ARTEMIS note left', 24);
+		
+                addOffset('idle');
+                addOffset("singUP", -67, 222);
+                addOffset("singRIGHT", -117, -157);
+                addOffset("singLEFT", 153, -211);
+                addOffset("singDOWN", 138, -218);
+        
+                playAnim('idle');
 
-				case 'pigeon':
-					tex = Paths.getSparrowAtlas('gardenia/assets/PIGEON_assetss', 'shared');
-					frames = tex;
-					animation.addByPrefix('idle', 'PIGEON_IDLE', 24);
-					animation.addByPrefix('singUP', 'PIGEONBODEUP', 24, false);
-					animation.addByPrefix('singRIGHT', 'PIGEON_RIGHT', 24, false);
-					animation.addByPrefix('singDOWN', 'PIGEONDOWN', 24, false);
-					animation.addByPrefix('singLEFT', 'PIGEON_LEFT', 24, false);
-			
-					addOffset('idle');
-					addOffset("singUP", -106, 39);
-					addOffset("singRIGHT", -150, -10);
-					addOffset("singLEFT", -8, 0);
-					addOffset("singDOWN", -31, -48);
-			
-					playAnim('idle');
+			case 'pigeon':
+				tex = Paths.getSparrowAtlas('gardenia/assets/PIGEON_assetss', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'PIGEON_IDLE', 24);
+				animation.addByPrefix('singUP', 'PIGEONBODEUP', 24, false);
+				animation.addByPrefix('singRIGHT', 'PIGEON_RIGHT', 24, false);
+				animation.addByPrefix('singDOWN', 'PIGEONDOWN', 24, false);
+				animation.addByPrefix('singLEFT', 'PIGEON_LEFT', 24, false);
+		
+				addOffset('idle');
+				addOffset("singUP", -106, 39);
+				addOffset("singRIGHT", -150, -10);
+				addOffset("singLEFT", -8, 0);
+				addOffset("singDOWN", -31, -48);
+		
+				playAnim('idle');
 
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('characters/spooky_kids_assets');
@@ -422,7 +454,7 @@ class Character extends FlxSprite
 
                 flipX = true;  
 
-			case 'bf-justice2':
+			case 'bf-pigeon':
                 tex = Paths.getSparrowAtlas('justice/assets/BoyFriend_Assets-Justice2', 'shared');
                 
                 frames = tex;

@@ -24,21 +24,18 @@ class StoryMenuState extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
-		['the-trial', 'judgment', 'executioner'],
-		['angel-kiss']
+		['angel-kiss', 'target-sighted', 'the-trial'],
 	];
 	var curDifficulty:Int = 1;
 
-	public static var weekUnlocked:Array<Bool> = [true, true, true, true, true, true, true, true];
+	public static var weekUnlocked:Array<Bool> = [true, false, false];
 
 	var weekCharacters:Array<Dynamic> = [
-		['', 'bf', 'gf'],
-		['', 'bf', 'gf']
+		['cd', '', '']
 	];
 
 	var weekNames:Array<String> = [
-		"Judgment's Week",
-		"Pigeon's Week"
+		"One Peek Per Week"
 	];
 
 	var txtWeekTitle:FlxText;
@@ -243,7 +240,7 @@ class StoryMenuState extends MusicBeatState
 		{
 			FlxG.sound.play(Paths.sound('cancelMenu'));
 			movedBack = true;
-			FlxG.switchState(new MainMenuState());
+			FlxG.switchState(new CoolMenuState());
 		}
 
 		super.update(elapsed);
