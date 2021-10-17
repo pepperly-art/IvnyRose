@@ -929,6 +929,7 @@ class PlayState extends MusicBeatState
 			case 'artemis':
 				dad.x -= 240;
 				dad.y -= 156;
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 		}
 
 		if (FlxG.save.data.characterSelected != null)
@@ -964,8 +965,8 @@ class PlayState extends MusicBeatState
 				gf.y += 3000;
 				gf.x -= 3000;
 			case 'dream':
-				dad.y += 275;
 				dad.x -= 200;
+				dad.y += 275;
 				gf.y += 150;
 				boyfriend.x += 350;
 			case 'hall':
