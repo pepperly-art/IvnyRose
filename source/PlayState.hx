@@ -751,12 +751,12 @@ class PlayState extends MusicBeatState
 						masks.active = false;
 						add(masks);
 
-						var guards:FlxSprite = new FlxSprite(-1270, -800).loadGraphic(Paths.image('justice/hall/guards'));
+						/*var guards:FlxSprite = new FlxSprite(-1270, -800).loadGraphic(Paths.image('justice/hall/guards'));
 						guards.antialiasing = true;
 						guards.scrollFactor.set(0.87, 0.87);
 						guards.setGraphicSize(Std.int(guards.width * 0.7));
 						guards.active = false;
-						add(guards);
+						add(guards);*/
 
 						heartemis = new FlxSprite(1000, 0);
 						heartemis.frames = Paths.getSparrowAtlas('justice/hall/artemisharvest');
