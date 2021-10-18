@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Ursa.png">
+	<!-- Created with Adobe Animate version 21.0.1.37179 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Ursa_idle0000" x="2" y="2" width="750" height="952" frameX="0" frameY="-19" frameWidth="759" frameHeight="971"/>
+	<SubTexture name="Ursa_idle0001" x="2" y="2" width="750" height="952" frameX="0" frameY="-19" frameWidth="759" frameHeight="971"/>
+	<SubTexture name="Ursa_idle0002" x="754" y="2" width="750" height="959" frameX="-2" frameY="-11" frameWidth="759" frameHeight="971"/>
+	<SubTexture name="Ursa_idle0003" x="754" y="2" width="750" height="959" frameX="-2" frameY="-11" frameWidth="759" frameHeight="971"/>
+	<SubTexture name="Ursa_idle0004" x="1506" y="2" width="748" height="963" frameX="-8" frameY="-7" frameWidth="759" frameHeight="971"/>
+	<SubTexture name="Ursa_idle0005" x="1506" y="2" width="748" height="963" frameX="-8" frameY="-7" frameWidth="759" frameHeight="971"/>
+	<SubTexture name="Ursa_idle0006" x="2256" y="2" width="751" height="969" frameX="-8" frameY="-1" frameWidth="759" frameHeight="971"/>
+	<SubTexture name="Ursa_idle0007" x="2256" y="2" width="751" height="969" frameX="-8" frameY="-1" frameWidth="759" frameHeight="971"/>
+	<SubTexture name="Ursa_idle0008" x="3009" y="2" width="750" height="970" frameX="-8" frameY="0" frameWidth="759" frameHeight="971"/>
+	<SubTexture name="Ursa_idle0009" x="3009" y="2" width="750" height="970" frameX="-8" frameY="0" frameWidth="759" frameHeight="971"/>
+	<SubTexture name="Ursa_idle0010" x="3009" y="2" width="750" height="970" frameX="-8" frameY="0" frameWidth="759" frameHeight="971"/>
+	<SubTexture name="Ursa_idle0011" x="3009" y="2" width="750" height="970" frameX="-8" frameY="0" frameWidth="759" frameHeight="971"/>
+	<SubTexture name="Ursa_idle0012" x="3009" y="2" width="750" height="970" frameX="-8" frameY="0" frameWidth="759" frameHeight="971"/>
+	<SubTexture name="Ursa_idle0013" x="3009" y="2" width="750" height="970" frameX="-8" frameY="0" frameWidth="759" frameHeight="971"/>
+</TextureAtlas>

@@ -88,7 +88,7 @@ class TitleState extends MusicBeatState
 		trace('NEWGROUNDS LOL');
 		#end
 
-		FlxG.save.bind('funkin', 'ninjamuffin99');
+		FlxG.save.bind('funkin', 'ivnyrose-demo');
 
 		KadeEngineData.initSave();
 
@@ -155,8 +155,18 @@ class TitleState extends MusicBeatState
 			FlxG.sound.music.fadeIn(4, 0, 0.7);
 		}
 
-		Conductor.changeBPM(102);
+		Conductor.changeBPM(103);
 		persistentUpdate = true;
+
+		logoBl = new FlxSprite(90,  0).loadGraphic(Paths.image('IvnyRoseLogo'));//
+		logoBl.antialiasing = true;
+		logoBl.setGraphicSize(Std.int(FlxG.width * 0.85));
+		FlxTween.tween(logoBl, {y: logoBl.y + 50}, 0.6, {ease: FlxEase.quadInOut, type: PINGPONG, startDelay: 0.1});
+		logoBl.updateHitbox();
+		
+		/*
+
+		FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback'));
 
 		if(Main.watermarks) {
 			logoBl = new FlxSprite(-150, -100);
@@ -182,8 +192,8 @@ class TitleState extends MusicBeatState
 		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
 		gfDance.antialiasing = true;
-		add(gfDance);
-		add(logoBl);
+		add(gfDance);*/
+		add(logoBl); 
 
 		titleText = new FlxSprite(100, FlxG.height * 0.8);
 		titleText.frames = Paths.getSparrowAtlas('titleEnter');
@@ -193,7 +203,7 @@ class TitleState extends MusicBeatState
 		titleText.animation.play('idle');
 		titleText.updateHitbox();
 		// titleText.screenCenter(X);
-		add(titleText);
+		//add(titleText);
 
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
 		logo.screenCenter();
@@ -210,7 +220,7 @@ class TitleState extends MusicBeatState
 		blackScreen = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		credGroup.add(blackScreen);
 
-		credTextShit = new Alphabet(0, 0, "ninjamuffin99\nPhantomArcade\nkawaisprite\nevilsk8er", true);
+		credTextShit = new Alphabet(0, 0, "A cool mod brought to you \nby the OG Funkin' team,\nKade Engine,\nand the Ivny Rose team", true);
 		credTextShit.screenCenter();
 
 		// credTextShit.alignment = CENTER;
@@ -325,7 +335,7 @@ class TitleState extends MusicBeatState
 						FlxG.switchState(new CoolMenuState());
 				}
 				
-				http.request();
+				http.request(); 
 			});
 			// FlxG.sound.play(Paths.music('titleShoot'), 0.7);
 		}
@@ -372,13 +382,13 @@ class TitleState extends MusicBeatState
 	{
 		super.beatHit();
 
-		logoBl.animation.play('bump');
-		danceLeft = !danceLeft;
+		// logoBl.animation.play('bump');
+		/*danceLeft = !danceLeft;
 
 		if (danceLeft)
 			gfDance.animation.play('danceRight');
 		else
-			gfDance.animation.play('danceLeft');
+			gfDance.animation.play('danceLeft'); */
 
 		FlxG.log.add(curBeat);
 
@@ -429,13 +439,13 @@ class TitleState extends MusicBeatState
 			// credTextShit.text = "Friday";
 			// credTextShit.screenCenter();
 			case 13:
-				addMoreText('Friday');
+				addMoreText('Friday Night Funkin');
 			// credTextShit.visible = true;
 			case 14:
-				addMoreText('Night');
+				addMoreText('vs IvnyRose');
 			// credTextShit.text += '\nNight';
 			case 15:
-				addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+				addMoreText('Demo'); // credTextShit.text += '\nFunkin';
 
 			case 16:
 				skipIntro();

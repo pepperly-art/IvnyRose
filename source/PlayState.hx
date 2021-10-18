@@ -172,6 +172,8 @@ class PlayState extends MusicBeatState
 	var upperBoppers:FlxSprite;
 	var bottomBoppers:FlxSprite;
 	var santa:FlxSprite;
+	var heartemis:FlxSprite;
+	var ursa:FlxSprite;
 
 	var fc:Bool = true;
 
@@ -676,42 +678,42 @@ class PlayState extends MusicBeatState
 						*/
 			}
 
-			case 'dessert':
+			case 'desert':
 				{
 					defaultCamZoom = 0.67;
-					curStage = 'dessert';
+					curStage = 'desert';
 
-					var BG:FlxSprite = new FlxSprite(-1270, -790).loadGraphic(Paths.image('justice/dessert/BG'));
+					var BG:FlxSprite = new FlxSprite(-1270, -790).loadGraphic(Paths.image('artemis/dessert/BG'));
 						BG.antialiasing = true;
-						BG.scrollFactor.set(0.9, 0.9);
+						BG.scrollFactor.set(0.5, 0.5);
 						BG.setGraphicSize(Std.int(BG.width * 0.7));
 						BG.active = false;
 						add(BG);
 
-					var clouds:FlxSprite = new FlxSprite(-1270, -790).loadGraphic(Paths.image('justice/dessert/clouds'));
+					var clouds:FlxSprite = new FlxSprite(-1270, -790).loadGraphic(Paths.image('artemis/dessert/clouds'));
 						clouds.antialiasing = true;
 						clouds.scrollFactor.set(1.12, 1.12);
 						clouds.setGraphicSize(Std.int(clouds.width * 0.7));
 						clouds.active = false;
 						add(clouds);
 
-					var back:FlxSprite = new FlxSprite(-1270, -790).loadGraphic(Paths.image('justice/dessert/back'));
+					var back:FlxSprite = new FlxSprite(-1270, -790).loadGraphic(Paths.image('artemis/dessert/back'));
 						back.antialiasing = true;
 						back.scrollFactor.set(1.12, 1.12);
 						back.setGraphicSize(Std.int(back.width * 0.7));
 						back.active = false;
 						add(back);
 
-					var floor:FlxSprite = new FlxSprite(-1270, -790).loadGraphic(Paths.image('justice/dessert/floor'));
+					var floor:FlxSprite = new FlxSprite(-1270, -790).loadGraphic(Paths.image('artemis/dessert/floor'));
 						floor.antialiasing = true;
-						floor.scrollFactor.set(0.9, 0.9);
+						floor.scrollFactor.set(0.95, 0.95);
 						floor.setGraphicSize(Std.int(floor.width * 0.7));
 						floor.active = false;
 						add(floor);
 
-					var things:FlxSprite = new FlxSprite(-1270, -790).loadGraphic(Paths.image('justice/dessert/things'));
+					var things:FlxSprite = new FlxSprite(-1270, -790).loadGraphic(Paths.image('artemis/dessert/things'));
 						things.antialiasing = true;
-						things.scrollFactor.set(0.9, 0.9);
+						things.scrollFactor.set(0.95, 0.95);
 						things.setGraphicSize(Std.int(things.width * 0.7));
 						things.active = false;
 						add(things);
@@ -723,7 +725,7 @@ class PlayState extends MusicBeatState
 						curStage = 'hall';
 						var BG:FlxSprite = new FlxSprite(-1270, -800).loadGraphic(Paths.image('justice/hall/BG'));
 						BG.antialiasing = true;
-						BG.scrollFactor.set(0.9, 0.9);
+						BG.scrollFactor.set(0.85, 0.85);
 						BG.setGraphicSize(Std.int(BG.width * 0.7));
 						BG.active = false;
 						add(BG);
@@ -744,17 +746,65 @@ class PlayState extends MusicBeatState
 
 						var masks:FlxSprite = new FlxSprite(-1270, -800).loadGraphic(Paths.image('justice/hall/masks'));
 						masks.antialiasing = true;
-						masks.scrollFactor.set(0.9, 0.9);
+						masks.scrollFactor.set(0.85, 0.85);
 						masks.setGraphicSize(Std.int(masks.width * 0.7));
 						masks.active = false;
 						add(masks);
 
-						var guards:FlxSprite = new FlxSprite(-1270, -800).loadGraphic(Paths.image('justice/hall/guards'));
+						/*var guards:FlxSprite = new FlxSprite(-1270, -800).loadGraphic(Paths.image('justice/hall/guards'));
 						guards.antialiasing = true;
-						guards.scrollFactor.set(0.9, 0.9);
+						guards.scrollFactor.set(0.87, 0.87);
 						guards.setGraphicSize(Std.int(guards.width * 0.7));
 						guards.active = false;
-						add(guards);
+						add(guards);*/
+
+						heartemis = new FlxSprite(1000, 0);
+						heartemis.frames = Paths.getSparrowAtlas('justice/hall/artemisharvest');
+						heartemis.animation.addByPrefix('idle', "Artemis Harvest idle", 24);
+						heartemis.animation.addByPrefix('beatone', "Artemis Harvest idle", 24);
+						heartemis.animation.addByPrefix('beattwo', "Artemis Harvest idle", 24);
+						heartemis.antialiasing = true;
+						if(FlxG.save.data.distractions){
+							heartemis.animation.play('idle', true);
+						}
+						heartemis.setGraphicSize(Std.int(heartemis.width * 0.85));
+						heartemis.scrollFactor.set(0.95, 0.95);
+						heartemis.updateHitbox();
+						add(heartemis);
+
+						ursa = new FlxSprite(-500, 0);
+						ursa.frames = Paths.getSparrowAtlas('justice/hall/Ursa');
+						ursa.animation.addByPrefix('idle', "Ursa_idle", 24);
+						ursa.animation.addByPrefix('beatone', "Ursa_idle", 24);
+						ursa.animation.addByPrefix('beattwo', "Ursa_idle", 24);
+						ursa.antialiasing = true;
+						if(FlxG.save.data.distractions){
+							ursa.animation.play('idle', true);
+						}
+						ursa.scrollFactor.set(0.95, 0.95);
+						ursa.setGraphicSize(Std.int(ursa.width * 0.85));
+						ursa.updateHitbox();
+						add(ursa);
+				}
+
+			case 'dream':
+				{
+						defaultCamZoom = 0.9;
+						curStage = 'dream';
+
+						var BG:FlxSprite = new FlxSprite(-600, -300).loadGraphic(Paths.image('gardenia/dream/bgflat'));
+						BG.antialiasing = true;
+						BG.scrollFactor.set(0.9, 0.9);
+						BG.setGraphicSize(Std.int(BG.width * 1));
+						BG.active = false;
+						add(BG);
+
+						var BG:FlxSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('gardenia/dream/bgsun'));
+						BG.antialiasing = true;
+						BG.scrollFactor.set(1.2, 0.6);
+						BG.setGraphicSize(Std.int(BG.width * 0.7));
+						BG.active = false;
+						add(BG);
 				}
 
 
@@ -875,7 +925,11 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'justice':
 				dad.x -= 120;
-				dad.y -= 130;
+				dad.y -= 130;			
+			case 'artemis':
+				dad.x -= 240;
+				dad.y -= 156;
+				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 		}
 
 		if (FlxG.save.data.characterSelected != null)
@@ -899,17 +953,22 @@ class PlayState extends MusicBeatState
 			case 'mallEvil':
 				boyfriend.x += 320;
 				dad.y -= 80;
-			case 'dessert':
+			case 'desert':
 				boyfriend.x += 220;
 				boyfriend.y += 30;
-				if (SONG.player1 == 'bfjustice2')
+				if (SONG.player1 == 'bf-pigeon')
 					{
 						boyfriend.y += 40;
 					}
-				dad.y += 343;
-				dad.x -= 240;
-				gf.y += 160;
-				gf.x -= 140;
+				dad.y += 100;
+				dad.x += 200;
+				gf.y += 3000;
+				gf.x -= 3000;
+			case 'dream':
+				dad.x -= 200;
+				dad.y += 275;
+				gf.y += 150;
+				boyfriend.x += 350;
 			case 'hall':
 				boyfriend.x += 230;
 				boyfriend.y += 60;
@@ -2222,8 +2281,11 @@ class PlayState extends MusicBeatState
 						camFollow.y = dad.getMidpoint().y - 430;
 						camFollow.x = dad.getMidpoint().x - 100;
 					case 'justice':
-						camFollow.y = boyfriend.getMidpoint().y - 270;
-						camFollow.x = boyfriend.getMidpoint().x - 730;		
+						camFollow.y = boyfriend.getMidpoint().y - 465;
+						camFollow.x = boyfriend.getMidpoint().x - 730;
+					case 'artemis':
+						camFollow.x = dad.getMidpoint().x +150;
+						camFollow.y = dad.getMidpoint().y -100;	
 				}
 
 				if (dad.curCharacter == 'mom')
@@ -3691,6 +3753,26 @@ class PlayState extends MusicBeatState
 
 		switch (curStage)
 		{
+
+			case 'hall':
+				if(FlxG.save.data.distractions){
+					
+					if (curBeat % 2 == 1){
+						trace('one');
+						ursa.animation.play("beatone", true);
+						heartemis.animation.play("beatone", true);
+					}
+
+					if (curBeat % 2 == 0){
+						trace('two');
+						ursa.animation.play("beattwo", true);
+						heartemis.animation.play("beattwo", true);
+					}
+
+
+
+				}
+
 			case 'school':
 				if(FlxG.save.data.distractions){
 					bgGirls.dance();

@@ -41,8 +41,8 @@ class CoolMenuState extends MusicBeatState
 	var menuOptions:Array<String> = [
 		'story mode',
 		'freeplay',
-		'fuuck',
-		'options'
+		'options',
+		'twitter'
 	];
 
 	var curSelected:Int = 0;
@@ -60,13 +60,13 @@ class CoolMenuState extends MusicBeatState
 			var spr:FlxSprite = new FlxSprite().loadGraphic(Paths.image('coolMenu/' + menuOptions[i]));
 			switch (i) {
 				case 0:
-					spr.setPosition(52, 29);
+					spr.setPosition(252, 50);
 				case 1:
-					spr.setPosition(47, 222);
+					spr.setPosition(500, 210);
 				case 2:
-					spr.setPosition(242, 325);
+					spr.setPosition(242, 360);
 				case 3:
-					spr.setPosition(91, 546);
+					spr.setPosition(50, 530);
 			}
 			spr.antialiasing = true;
 			grpItems.add(spr);
@@ -96,9 +96,10 @@ class CoolMenuState extends MusicBeatState
 			case 1:
 				FlxG.switchState(new FreeplayState());
 			case 2:
-				FlxG.switchState(new CharacterSelect());
-			case 3:
 				FlxG.switchState(new OptionsMenu());
+			case 3:
+				fancyOpenURL("https://twitter.com/ivnyrose");
+				
 		}
 	}
 
