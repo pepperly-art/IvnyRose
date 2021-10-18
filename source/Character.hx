@@ -63,7 +63,7 @@ class Character extends FlxSprite
 				playAnim('danceRight');
 
 			case 'gf-gar':
-				tex = Paths.getSparrowAtlas('gardenia/assets/GFgardenia');
+				tex = Paths.getSparrowAtlas('gardenia/assets/gf_gardenia');
 				frames = tex;
 				animation.addByPrefix('cheer', 'GF Cheer', 24, false);
 				animation.addByIndices('sad', 'gf sad', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
@@ -78,7 +78,7 @@ class Character extends FlxSprite
 				playAnim('danceRight');
 			
 			case 'gf-gar3':
-				tex = Paths.getSparrowAtlas('gardenia/assets/GFgardenia');
+				tex = Paths.getSparrowAtlas('gardenia/assets/gf_gardenia');
 				frames = tex;
 				animation.addByPrefix('cheer', 'GF Cheer STAGE3', 24, false);
 				animation.addByIndices('sad', 'gf sad PART2', [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "", 24, false);
