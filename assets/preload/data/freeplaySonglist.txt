@@ -1,6 +1,4 @@
 The trial:justice:1
-Judgment:justice:1
-Executioner:justice:1
 angel-kiss:pigeon:1
 target-sighted:artemis:1
 
