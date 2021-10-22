@@ -925,7 +925,10 @@ class PlayState extends MusicBeatState
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 			case 'justice':
 				dad.x -= 120;
-				dad.y -= 130;			
+				dad.y -= 130;
+			case 'justice-4th':
+				dad.y -= 377;
+				dad.x -= 347;		
 			case 'artemis':
 				dad.x -= 240;
 				dad.y -= 156;
@@ -2282,6 +2285,9 @@ class PlayState extends MusicBeatState
 						camFollow.x = dad.getMidpoint().x - 100;
 					case 'justice':
 						camFollow.y = boyfriend.getMidpoint().y - 465;
+						camFollow.x = boyfriend.getMidpoint().x - 730;
+					case 'justice-4th':
+						camFollow.y = boyfriend.getMidpoint().y - 665;
 						camFollow.x = boyfriend.getMidpoint().x - 730;
 					case 'artemis':
 						camFollow.x = dad.getMidpoint().x +150;

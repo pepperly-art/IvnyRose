@@ -216,7 +216,26 @@ class Character extends FlxSprite
                 addOffset("ugh");
         
                 playAnim('idle');
-			
+
+		
+			case 'justice-4th':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('justice/cereal/Cereal', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Cereal Idle', 24);
+				animation.addByPrefix('singUP', 'Cereal Up', 24);
+				animation.addByPrefix('singRIGHT', 'Cereal Right', 24);
+				animation.addByPrefix('singDOWN', 'Cereal Down', 24);
+				animation.addByPrefix('singLEFT', 'Cereal Left', 24);
+		
+				addOffset('idle');
+				addOffset("singUP", -134, 93);
+				addOffset("singRIGHT", -163, 29);
+				addOffset("singLEFT", -61, 0);
+				addOffset("singDOWN", -29, -182);
+		
+				playAnim('idle');
+
 			case 'artemis':
 				tex = Paths.getSparrowAtlas('artemis/assets/artemis_assets', 'shared');
 				frames = tex;
