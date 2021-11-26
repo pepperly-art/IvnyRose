@@ -690,7 +690,7 @@ class PlayState extends MusicBeatState
 						BG.active = false;
 						add(BG);
 
-					var clouds:FlxSprite = new FlxSprite(-1270, -790).loadGraphic(Paths.image('artemis/dessert/clouds'));
+					var clouds:FlxSprite = new FlxSprite(-1170, -790).loadGraphic(Paths.image('artemis/dessert/clouds'));
 						clouds.antialiasing = true;
 						clouds.scrollFactor.set(1.12, 1.12);
 						clouds.setGraphicSize(Std.int(clouds.width * 0.7));
@@ -704,12 +704,20 @@ class PlayState extends MusicBeatState
 						back.active = false;
 						add(back);
 
-					var floor:FlxSprite = new FlxSprite(-1270, -790).loadGraphic(Paths.image('artemis/dessert/floor'));
+					var floor:FlxSprite = new FlxSprite(-1270, -770).loadGraphic(Paths.image('artemis/dessert/floor'));
 						floor.antialiasing = true;
 						floor.scrollFactor.set(0.95, 0.95);
 						floor.setGraphicSize(Std.int(floor.width * 0.7));
 						floor.active = false;
 						add(floor);
+
+					var island:FlxSprite = new FlxSprite(-1270, -770).loadGraphic(Paths.image('artemis/dessert/island'));
+						island.antialiasing = true;
+						island.scrollFactor.set(0.95, 0.95);
+						island.setGraphicSize(Std.int(island.width * 0.7));
+						island.active = false;
+						FlxTween.tween(island, {y: -690}, 4, {type: FlxTweenType.PINGPONG, ease: FlxEase.quadInOut, loopDelay: 0.1});
+						add(island); //im so cool holy fuck
 
 					var things:FlxSprite = new FlxSprite(-1270, -790).loadGraphic(Paths.image('artemis/dessert/things'));
 						things.antialiasing = true;
@@ -957,14 +965,14 @@ class PlayState extends MusicBeatState
 				boyfriend.x += 320;
 				dad.y -= 80;
 			case 'desert':
-				boyfriend.x += 220;
+				boyfriend.x += 320;
 				boyfriend.y += 30;
 				if (SONG.player1 == 'bf-pigeon')
 					{
 						boyfriend.y += 40;
 					}
 				dad.y += 100;
-				dad.x += 200;
+				dad.x += 100;
 				gf.y += 3000;
 				gf.x -= 3000;
 			case 'dream':
