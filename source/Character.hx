@@ -214,9 +214,47 @@ class Character extends FlxSprite
         
                 addOffset('idle');
                 addOffset("ugh");
-        
                 playAnim('idle');
 
+			case 'justice3rd-ends'
+				tex = Paths.getSparrowAtlas('characters/JusticeAngry2', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Justice_BaseDANCE', 24);
+				animation.addByPrefix('idle-alt', 'Justice_idleMADDANCE', 24);
+				animation.addByPrefix('playing', 'Justice_taunt_PLAYING', 24);
+				animation.addByPrefix('mortals', 'Justice_taunt_MORTALS', 24);
+
+				addOffset('idle');
+				addOffset('idle-alt');
+				addOffset('playing', 26, 80);
+                addOffset('mortals', 147, 13);
+
+				playAnim('idle');
+
+
+			case 'justice3rd':
+				tex = Paths.getSparrowAtlas('characters/JusticeAngry', 'shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'Justice_idleMADDANCE', 24);
+				animation.addByPrefix('singUP', 'Justice_upMADDANCE', 24);
+				animation.addByPrefix('singRIGHT', 'Justice_rightMADDANCE', 24);
+				animation.addByPrefix('singDOWN', 'Justice_downMADDANCE', 24);
+				animation.addByPrefix('singLEFT', 'Justice_leftMADDANCE', 24);
+				animation.addByPrefix('catch', 'Justice_taunt_CATCH', 24);
+				animation.addByPrefix('drown', 'Justice_taunt_DROWN', 24);
+				animation.addByPrefix('enough', 'Justice_taunt_ENOUGH', 24);
+
+				        
+                addOffset('idle');
+                addOffset("singUP", 9, 3);
+                addOffset("singRIGHT", 2, 14);
+                addOffset("singLEFT", 23, 20);
+                addOffset("singDOWN", 19, -18); 
+                addOffset('catch');
+				addOffset('drown', 59, -11);		
+				addOffset('enough', -4, 13);		
+				
+				playAnim('idle');
 		
 			case 'justice-4th':
 				// DAD ANIMATION LOADING CODE
