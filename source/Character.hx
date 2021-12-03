@@ -226,8 +226,8 @@ class Character extends FlxSprite
 
 				addOffset('idle');
 				addOffset('idle-alt');
-				addOffset('playing', 26, 80);
-                addOffset('mortals', 147, 13);
+				addOffset('playing', 36, 76);
+                addOffset('mortals', 159, 9);
 
 				playAnim('idle');
 
